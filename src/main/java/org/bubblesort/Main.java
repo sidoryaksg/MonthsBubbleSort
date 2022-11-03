@@ -5,9 +5,6 @@ import java.time.Month;
 public class Main {
     public static void main(String[] args) {
 
-
-
-
         Month[] months = new Month[]{Month.APRIL,
                 Month.AUGUST,
                 Month.DECEMBER,
@@ -45,5 +42,17 @@ public class Main {
             System.out.print(months[i] + " ");
         }
         System.out.println();
+
+        for (int i = 0; i < months.length-1; i++) {
+            if (months[i].ordinal() > months[i+1].ordinal()){
+                System.out.println("Месяц № " +
+                        (i+1) +
+                        " (" +
+                        months[i] +
+                        ") из списка больше последущего месяца " +
+                        months[i+1]);
+            }
+
+        }
     }
 }
