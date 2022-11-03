@@ -1,23 +1,5 @@
 package org.bubblesort;
-
-
-import java.time.DayOfWeek;
 import java.time.Month;
-enum Months {
-
-    JANUARY,
-    FEBRUARY,
-    MARCH,
-    APRIL,
-    MAY,
-    JUNE,
-    JULY,
-    AUGUST,
-    SEPTEMBER,
-    OCTOBER,
-    NOVEMBER,
-    DECEMBER
-}
 
 
 public class Main {
@@ -26,18 +8,18 @@ public class Main {
 
 
 
-        Months[] months = new Months[]{Months.APRIL,
-                Months.AUGUST,
-                Months.DECEMBER,
-                Months.FEBRUARY,
-                Months.JANUARY,
-                Months.MARCH,
-                Months.NOVEMBER,
-                Months.OCTOBER,
-                Months.SEPTEMBER,
-                Months.MAY,
-                Months.JULY,
-                Months.JUNE
+        Month[] months = new Month[]{Month.APRIL,
+                Month.AUGUST,
+                Month.DECEMBER,
+                Month.FEBRUARY,
+                Month.JANUARY,
+                Month.MARCH,
+                Month.NOVEMBER,
+                Month.OCTOBER,
+                Month.SEPTEMBER,
+                Month.MAY,
+                Month.JULY,
+                Month.JUNE
         };
         printArray(months);
 
@@ -46,7 +28,7 @@ public class Main {
         for (int bubblesEnd = bubbleLength - 1; bubblesEnd >= 0; bubblesEnd--) {
             for (int i = 0; i < bubbleLength - 1; i++) {
                 if (months[i].ordinal() > months[i + 1].ordinal()) {
-                    Months temp = months[i];
+                    Month temp = months[i];
                     months[i] = months[i + 1];
                     months[i + 1] = temp;
                 }
@@ -58,7 +40,7 @@ public class Main {
     }
 
 
-    private static void printArray(Months[] months) {
+    private static void printArray(Month[] months) {
         for (int i = 0; i < months.length; i++) {
             System.out.print(months[i] + " ");
         }
