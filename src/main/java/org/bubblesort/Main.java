@@ -85,12 +85,10 @@ public class Main {
             if (first.charAt(i) < second.charAt(i)) {
                 //System.out.println("Меньше, конец");
                 return true;
-            }
-            else if (first.charAt(i) == second.charAt(i)) {
+            } else if (first.charAt(i) == second.charAt(i)) {
                 //System.out.println("Равно, дальше");
                 continue;
-            }
-            else
+            } else
                 break;
         }
         return false;
@@ -116,7 +114,7 @@ public class Main {
 
         for (int bubblesEnd = bubbleLength - 1; bubblesEnd >= 0; bubblesEnd--) {
             for (int i = 0; i < bubbleLength - 1; i++) {
-                if (checkAlphabetic(months[i].toString(), months[i+1].toString()) == false) {
+                if (checkAlphabetic(months[i].toString(), months[i + 1].toString()) == false) {
                     Month temp = months[i];
                     months[i] = months[i + 1];
                     months[i + 1] = temp;
